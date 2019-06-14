@@ -1,15 +1,12 @@
 import requests
-import cjson
 import json
 import links
 
 r = requests.get(links.link2, verify=False)
+
 json_file=r.json()
 keys=json_file.keys()
-
-print(keys)
-
-#print(json_file)
+print(json_file['DATA_1'][50]['uid'])
 
 # print(type(json_file['DATA_1']))
 # print(json_file['DATA_1'][0])
