@@ -2,11 +2,38 @@ import requests
 import json
 import links
 
-r = requests.get(links.link2, verify=False)
+#user_info='https://megabit38.ru:9443/admin/index.cgi?qindex=15&UID='+uid+'&SUMMARY_SHOW=1&EXPORT=1&API_KEY=9954782216weDHUSdhgsdGJ544'
 
-json_file=r.json()
-keys=json_file.keys()
-print(json_file['DATA_1'][50]['uid'])
+
+f = open('nukuti.txt', 'w')
+
+
+all_info = requests.get(links.all_info, verify=False)
+user_info = requests.get(links.user_info, verify=False)
+
+json_all=all_info.json()
+keys_all=info=json_all.keys()
+
+json_user=user_info.json()
+
+q_users=len(json_all['DATA_1'])
+print(q_users)
+
+list_uid=list(range(0,q_users))
+
+for index in list(range(0,q_users)):
+    uid=json_all['DATA_1'][index]['uid']
+    list_uid[index]=uid
+
+print(list_uid)
+for counter in range(0,len(list_uid)):
+    user_info='https://megabit38.ru:9443/admin/index.cgi?qindex=15&UID='+list_uid[counter]+'&SUMMARY_SHOW=1&EXPORT=1&API_KEY=9954782216weDHUSdhgsdGJ544'
+    json_=all_info.json()
+    f.write(user_info + '\n')
+
+
+
+
 
 # print(type(json_file['DATA_1']))
 # print(json_file['DATA_1'][0])

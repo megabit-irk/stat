@@ -1,24 +1,20 @@
+abills
 
-
-9954782216weDHUSdhgsdGJ544
-
-123456789987654321
-
-
-
-
-https://megabit38.ru:9443/admin/index.cgi?qindex=130&UID=112&sort=1&EXPORT_CONTENT=internet_user&header=1&json=1&API_KEY=9954782216weDHUSdhgsdGJ544
-
-https://megabit38.ru:9443/admin/index.cgi?qindex=7&search=1&type=10&header=1&json=1&LOGIN=testuser&EXPORT_CONTENT=USERS_LIST&SKIP_FULL_INFO=1&API_KEY=9954782216weDHUSdhgsdGJ544
-
-
+тарифные планы
 https://megabit38.ru:9443/admin/index.cgi?get_index=dv_tp&EXPORT_CONTENT=DV_TARIF_PLANS&header=1&json=1&PAGE_ROWS=1000000&API_KEY=9954782216weDHUSdhgsdGJ544
 
+районы
 https://megabit38.ru:9443/admin/index.cgi?get_index=form_districts&EXPORT_CONTENT=DISTRICTS_LIST&header=1&json=1&PAGE_ROWS=1000000&API_KEY=9954782216weDHUSdhgsdGJ544
 
+все абоненты  без описание без UID
 https://megabit38.ru:9443/admin/index.cgi?get_index=dv_users_list&UID=UID&EXPORT_CONTENT=INTERNET_USERS_LIST&header=1&json=1&PAGE_ROWS=1000000&API_KEY=9954782216weDHUSdhgsdGJ544
 
+все абоненты с описанием +UID
 https://megabit38.ru:9443/admin/index.cgi?qindex=7&search=1&type=10&header=1&json=1&EXPORT_CONTENT=USERS_LIST&SKIP_FULL_INFO=1&PAGE_ROWS=1000000&API_KEY=9954782216weDHUSdhgsdGJ544
 
 информация об абоненте
 https://megabit38.ru:9443/admin/index.cgi?qindex=15&UID=1478&SUMMARY_SHOW=1&EXPORT=1&API_KEY=9954782216weDHUSdhgsdGJ544
+
+
+redmine
+http://10.0.237.102/issues.json?sort=&offset=0&limit=25&page=1
