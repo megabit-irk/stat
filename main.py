@@ -7,30 +7,31 @@ import links
 
 f = open('nukuti.txt', 'w')
 
-
 all_info = requests.get(links.all_info, verify=False)
 #user_info = requests.get(links.user_info, verify=False)
 
 json_all=all_info.json()
 keys_all=info=json_all.keys()
 
-json_user=user_info.json()
+#json_user=user_info.json()
 
 q_users=len(json_all['DATA_1'])
-print(q_users)
-
 list_uid=list(range(0,q_users))
 
 for index in list(range(0,q_users)):
     uid=json_all['DATA_1'][index]['uid']
     list_uid[index]=uid
+#print(list_uid)
 
-print(list_uid)
 user_info = 0
-for counter in range(0,len(list_uid)):
+for counter in range(0,5):
     user_info = requests.get('https://megabit38.ru:9443/admin/index.cgi?qindex=15&UID='+list_uid[counter]+'&SUMMARY_SHOW=1&EXPORT=1&API_KEY=9954782216weDHUSdhgsdGJ544', verify=False)
-    json_user_info=user_info.json()
-    f.write(str(json_user_info) + '\n')
+    text_user_info=user_info.text
+    print(type(text_user_info))
+    #print(list_uid[counter])
+    f.write(text_user_info + '\n')
+
+f.close()
 
 
 
